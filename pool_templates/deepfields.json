@@ -1,0 +1,231 @@
+[
+    {
+        "pool": {
+            "name": "Deep Fields",
+            "url": "https://deepfields.io",
+            "fee": 0.5,
+            "type": "PROP / SOLO / FINDER"
+        }
+    },
+    {
+        "coin": "APX",
+        "servers": [
+            {
+                "geo": "US-East - Newark, NJ",
+                "urls": [
+                    "stratum+tcp://us-east.deepfields.io:3637"
+                ],
+                "ssl_urls": [ 
+                    "stratum+tcps://us-east.deepfields.io:3638"
+                ]
+            },
+            {
+                "geo": "US-West - Fremont, CA",
+                "urls": [
+                    "stratum+tcp://us-west.deepfields.io:3637"
+                ],
+                "ssl_urls": [ 
+                    "stratum+tcps://us-west.deepfields.io:3638"
+                ]
+            },
+            {
+                "geo": "EU-West - London, UK",
+                "urls": [
+                    "stratum+tcp://eu-west.deepfields.io:3637"
+                ],
+                "ssl_urls": [ 
+                    "stratum+tcps://eu-west.deepfields.io:3638"
+                ]
+            },
+            {
+                "geo": "AP-South Singapore, SG",
+                "urls": [
+                    "stratum+tcp://ap-south.deepfields.io:3637"
+                ],
+                "ssl_urls": [ 
+                    "stratum+tcps://ap-south.deepfields.io:3638"
+                ]
+            }
+        ],
+        "miners": {
+            "teamredminer":{
+                "url": "%URL%",
+                "algo": "x16rv2",
+                "pass": "c=APX",
+                "template": "%WAL%.%WORKER_NAME%"
+            },
+            "wildrig-multi": {
+                "url": "%URL%",
+                "algo": "x16rv2",
+                "pass": "c=APX",
+                "template": "%WAL%.%WORKER_NAME%",
+                "user_config": "\"opencl-threads\" : \"2\""
+            },
+            "t-rex":{
+                "algo":"x16rv2",
+                "template":"%WAL%.%WORKER_NAME%",
+                "server":"%URL%",
+                "pass":"c=APX",
+                "ver": "0.19.14-cuda111"
+            }
+        }
+    },
+    {
+        "coin": "DYNAMO",
+        "servers": [
+            {
+                "geo": "US-East - Newark, NJ",
+                "urls": [
+                    "stratum+tcp://us-east.deepfields.io:4234"
+                ],
+                "ssl_urls": [ 
+                    "stratum+tcps://us-east.deepfields.io:4235"
+                ]
+            },
+            {
+                "geo": "US-West - Fremont, CA",
+                "urls": [
+                    "stratum+tcp://us-west.deepfields.io:4234"
+                ],
+                "ssl_urls": [ 
+                    "stratum+tcps://us-west.deepfields.io:4235"
+                ]
+            },
+            {
+                "geo": "EU-West - London, UK",
+                "urls": [
+                    "stratum+tcp://eu-west.deepfields.io:4234"
+                ],
+                "ssl_urls": [ 
+                    "stratum+tcps://eu-west.deepfields.io:4235"
+                ]
+            },
+            {
+                "geo": "AP-South Singapore, SG",
+                "urls": [
+                    "stratum+tcp://ap-south.deepfields.io:4234"
+                ],
+                "ssl_urls": [ 
+                    "stratum+tcps://ap-south.deepfields.io:4235"
+                ]
+            }
+        ],
+        "miners": {
+            "srbminer": {
+                "url": "%URL%",
+                "algo": "dynamo",
+                "pass": "c=DYNAMO,d=2",
+                "template": "%WAL%.%WORKER_NAME%",
+                "ver": "0.9.1"
+            },
+            "custom": {
+                "url": "%URL%",
+                "pass": "c=DYNAMO,d=2",
+                "miner": "dyn_miner",
+                "template": "%WAL%.%WORKER_NAME%",
+                "install_url": "https://deepfields.io/static/dyn_miner_3.2-0_0.tar.gz"
+            }
+        }
+    },
+    {
+        "coin": "PLSR",
+        "servers": [
+            {
+                "geo": "US-East - Newark, NJ",
+                "urls": [
+                    "stratum+tcp://us-east.deepfields.io:3343"
+                ],
+                "ssl_urls": [ 
+                    "stratum+tcps://us-east.deepfields.io:3344"
+                ]
+            },
+            {
+                "geo": "US-West - Fremont, CA",
+                "urls": [
+                    "stratum+tcp://us-west.deepfields.io:3343"
+                ],
+                "ssl_urls": [ 
+                    "stratum+tcps://us-west.deepfields.io:3344"
+                ]
+            },
+            {
+                "geo": "EU-West - London, UK",
+                "urls": [
+                    "stratum+tcp://eu-west.deepfields.io:3343"
+                ],
+                "ssl_urls": [ 
+                    "stratum+tcps://eu-west.deepfields.io:3344"
+                ]
+            },
+            {
+                "geo": "AP-South Singapore, SG",
+                "urls": [
+                    "stratum+tcp://ap-south.deepfields.io:3343"
+                ],
+                "ssl_urls": [ 
+                    "stratum+tcps://ap-south.deepfields.io:3344"
+                ]
+            }
+        ],
+        "miners": {
+            "srbminer": {
+                "url": "%URL%",
+                "algo": "curvehash",
+                "pass": "c=PLSR",
+                "template": "%WAL%.%WORKER_NAME%",
+            },
+            "wildrig-multi": {
+                "url": "%URL%",
+                "algo": "curvehash",
+                "pass": "c=PLSR",
+                "template": "%WAL%.%WORKER_NAME%"
+            }
+        }
+    },
+    {
+        "coin": "RXD",
+        "servers": [
+            {
+                "geo": "US-East - Newark, NJ",
+                "urls": [
+                    "stratum+tcp://us-east.deepfields.io:7086"
+                ],
+                "ssl_urls": [ 
+                    "stratum+tcps://us-east.deepfields.io:7087"
+                ]
+            },
+            {
+                "geo": "US-West - Fremont, CA",
+                "urls": [
+                    "stratum+tcp://us-west.deepfields.io:7086"
+                ],
+                "ssl_urls": [ 
+                    "stratum+tcps://us-west.deepfields.io:7087"
+                ]
+            },
+            {
+                "geo": "EU-West - London, UK",
+                "urls": [
+                    "stratum+tcp://eu-west.deepfields.io:7086"
+                ],
+                "ssl_urls": [ 
+                    "stratum+tcps://eu-west.deepfields.io:7087"
+                ]
+            },
+            {
+                "geo": "AP-South Singapore, SG",
+                "urls": [
+                    "stratum+tcp://ap-south.deepfields.io:7086"
+                ],
+                "ssl_urls": [ 
+                    "stratum+tcps://ap-south.deepfields.io:7087"
+                ]
+            }
+        ],
+        "miners": {
+            "_prototype": "miners_sha512256d"
+        }
+    }
+
+
+]
